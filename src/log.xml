@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<logger>
+		<!--  是否启用数据库日志 -->
+		<isDataLog>true</isDataLog>
+		<!--  是否启用文件日志 -->
+		<isFileLog>true</isFileLog>
+		<!-- 是否启用web控制台信息日志 -->
+		<isConsoleLog>true</isConsoleLog>
+		
+		<!-- 文件日志的级别,分为:DEBUG,INFO,ERROR,FATAL -->
+		<fileLevel>DEBUG</fileLevel>
+		<!-- 控制台日志级别,分为:DEBUG,INFO,ERROR,FATAL -->
+		<conLevel>DEBUG</conLevel>
+	
+		<!-- 是否以同步方式写入日志,如果以同步方式写入,可保证一个原子交易日志-->
+		<!-- 的连续性,但会损失部分性能 -->
+		<isSyn>false</isSyn>
+		<!-- 是否以缓冲方式输出日志文件,以缓冲方式,可提升一定的性能 -->
+		<isBuffer>false</isBuffer>
+		<bufferSize>1024</bufferSize>
+		<!-- 日志输出文件及目录,默认为web服务启动目录,可根据相对路径调整 -->
+		<logFileName>LogFile</logFileName>
+	</logger>
+</config>

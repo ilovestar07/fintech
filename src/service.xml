@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="logonServiceImp" parent="JdbcTransactionProxyFactoryBean">
+		<property name="target">
+			<bean class="com.fintech.logon.service.LogonService">
+				<property name="userStatusDao" ref="userStatusDao" />
+				<property name="userDao" ref="userDao" />
+				<property name="menuDao" ref="menuDao" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="userServiceImp" parent="JdbcTransactionProxyFactoryBean">
+		<property name="target">
+			<bean class="com.fintech.user.service.UserService">
+				<property name="userDao" ref="userDao" />
+				<property name="userStatusDao" ref="userStatusDao" />
+			</bean>
+		</property>
+	</bean>
+</beans>

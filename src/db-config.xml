@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"></property>
+		<property name="user" value="dream"></property>
+		<property name="password" value="dream"></property>
+	</bean>
+	
+	<!-- 公共数据访问源 -->
+	<bean id="jdbcDaoSupport"
+		class="com.fintech.util.database.JdbcDaoSupport">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+</beans>

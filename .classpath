@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/classes12.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-dbcp-1.2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-pool-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jfreechart-1.0.10-swt.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jfreechart-1.0.10.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jta.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-core.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-jdbc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring2.5.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xwork-2.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/apache-tomcat-6.0.41/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="D:/apache-tomcat-6.0.41/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/thymeleaf-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>
