@@ -20,7 +20,6 @@ import java.util.List;
 import com.fintech.base.bean.Parameter;
 import com.fintech.base.bean.SubTransBean;
 import com.fintech.base.bean.TransBean;
-import com.fintech.json.MenuJson;
 import com.fintech.log.Log;
 import com.fintech.menu.bean.MenuBean;
 import com.fintech.menu.dao.MenuDao;
@@ -46,7 +45,7 @@ public class Initiator {
 		try {
 			initTrans();
 			initParameter();
-			initMenu();
+//			initMenu();
 		} catch (Exception e) {
 			Log.getInstance().error(String.valueOf(this.getClass().hashCode()), "初始化失败！", e);
 		}
@@ -91,17 +90,17 @@ public class Initiator {
 		Log.getInstance().info(String.valueOf(this.getClass().hashCode()), "系统参数初始化结束！");
 	}
 
-	/**
-	 * 初始化菜单
-	 * 
-	 * @throws Exception
-	 */
-	private void initMenu() throws Exception {
-		Log.getInstance().info(String.valueOf(this.getClass().hashCode()), "菜单初始化开始！");
-		sysMenus = menuDao.getAllMenus();
-		sysMenusJson = MenuJson.listToJson(sysMenus);
-		Log.getInstance().info(String.valueOf(this.getClass().hashCode()), "菜单初始化结束！");
-	}
+//	/**
+//	 * 初始化菜单
+//	 * 
+//	 * @throws Exception
+//	 */
+//	private void initMenu() throws Exception {
+//		Log.getInstance().info(String.valueOf(this.getClass().hashCode()), "菜单初始化开始！");
+//		sysMenus = menuDao.getAllMenus();
+//		sysMenusJson = MenuJson.listToJson(sysMenus);
+//		Log.getInstance().info(String.valueOf(this.getClass().hashCode()), "菜单初始化结束！");
+//	}
 
 	/**
 	 * 系统初始化

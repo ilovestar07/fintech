@@ -14,10 +14,12 @@
 package com.fintech.logon.action;
 
 import java.io.IOException;
+import java.util.List;
 
 import com.fintech.base.action.BaseAction;
-import com.fintech.listen.Initiator;
+import com.fintech.json.MenuJson;
 import com.fintech.logon.service.imp.LogonServiceImp;
+import com.fintech.menu.bean.MenuBean;
 import com.fintech.user.bean.UserBean;
 import com.fintech.user.bean.UserStatusBean;
 import com.fintech.util.common.StringUtil;
@@ -86,7 +88,8 @@ public class LogonAction extends BaseAction {
 					userStatusTemp.setLogon_status(SysConstant.LOGON_STATUS_ONLINE);
 					userStatusTemp.setLogon_num(0.00);
 //					logonServiceImp.updateUserStatus(userStatusTemp);
-					request.getSession().setAttribute(SysConstant.SYS_MENU_TREE, Initiator.sysMenusJson);
+					List<MenuBean> menuBeans = logonServiceImp.getSysMenuByRight(user_code);
+					request.getSession().setAttribute(SysConstant.SYS_MENU_TREE, MenuJson.listToJson(menuBeans));
 					res("用户登录成功!", SysConstant.YESORNO_YES);
 				}
 			} else {

@@ -48,6 +48,14 @@ public interface LogonServiceImp {
 	 * @throws Exception
 	 */
 	public List<MenuBean> getSysMenu() throws Exception;
+	
+	/**
+	 * 根据用户编号获取有权限的系统菜单
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<MenuBean> getSysMenuByRight(String user_code) throws Exception;
 
 	/**
 	 * 获取系统菜单的JSON串

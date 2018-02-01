@@ -87,6 +87,16 @@ public class LogonService implements LogonServiceImp {
 	public List<MenuBean> getSysMenu() throws Exception {
 		return menuDao.getAllMenus();
 	}
+	
+	/**
+	 * 根据用户编号获取有权限的系统菜单
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<MenuBean> getSysMenuByRight(String user_code) throws Exception {
+		return menuDao.getAllMenusByRight(user_code);
+	}
 
 	/**
 	 * 获取系统菜单的JSON串

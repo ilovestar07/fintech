@@ -112,6 +112,29 @@ public class SysConstant {
 	 * 登录状态：离线
 	 */
 	public static final String LOGON_STATUS_OFFLINE = "0";
+	
+	/************************* 权限类型**********************************/
+	/**
+	 * 权限类型：操作
+	 */
+	public static final String USER_RIGHT_USE = "1";
+	
+	/**
+	 * 权限类型：授权
+	 */
+	public static final String USER_RIGHT_GRANT = "2";
+	
+	/************************* 权限对象**********************************/
+	/**
+	 * 权限对象：用户
+	 */
+	public static final String RIGHT_OBJECT_USER = "1";
+	
+	/**
+	 * 权限对象：角色
+	 */
+	public static final String RIGHT_OBJECT_ROLE = "2";
+
 
 	/************************* 配置文件名 ********************************/
 	/**
